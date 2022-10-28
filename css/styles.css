@@ -15,17 +15,10 @@
 
 /* --ЗАГАЛЬНІ ЗМІННІ-- */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 /* переважаючі характеристики сторінки */
 body {
     background: var(--hero-color);
     color: var(--title-text-color);
-    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -52,29 +45,6 @@ body {
     width: 1px;
     height: 1px;
     margin: -1px;
-
-    /* варіант від ментора */
-    
-    /* position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0); */
-
-    /* border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    word-wrap: normal !important; */
 }
 
 
@@ -95,12 +65,9 @@ h1, h2, h3, h4, p {
     padding: 0;
 }
 
-.center {
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    align-items: center;
-    flex-direction: column;
+/* видалення відступів картинок */
+img {
+    display: block;
 }
 
 /* --ШАПКА САЙТУ-- */
@@ -296,7 +263,6 @@ margin-right: 50px;
 
 .user-title {
     color:var(--primary-text-color);
-    margin-top: 30px;
 
     font-weight: 500;
     font-size: 16px;
@@ -308,17 +274,16 @@ margin-right: 50px;
 .user-desc {
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 30px;
 }
 
 .user-signature {
     background: var(--hero-color);
     border-radius: 0px 0px 4px 4px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .user-list li {
-    display: flex;
-    flex-direction: column;
     width: 270px;
     margin-right: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -373,8 +338,6 @@ margin-right: 50px;
 .projects li {
     margin-bottom: 30px;
     margin-right: 30px;
-    display: flex;
-    flex-direction: column;
 }
 
 .projects-border {
