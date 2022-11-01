@@ -2,15 +2,17 @@
 :root {
   --logo-color: #000000;
   --primary-text-color: #212121;
-  --hero-fon: #2f303a;
+  --hero-fon: #2f303a;  
   --title-text-color: #757575;
-  --contact-color: rgba(255, 255, 255, 0.6);
+  --social-icon: #AFB1B8;
   --portfolio-button: #f5f4fa;
   --heder-border: #ececec;
   --portfolio-border: #eeeeee;
   --hero-color: #ffffff;
   --accent-color: #2196f3;
   --buttun-color-active: #188ce8;
+  --contact-color: rgba(255, 255, 255, 0.6);
+  --footer-social-link: rgba(255, 255, 255, 0.1);
 }
 
 /* --ЗАГАЛЬНІ ЗМІННІ-- */
@@ -54,8 +56,6 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-
-  /* outline: 2px solid var(--logo-color); удали меня */
 }
 
 /* обнулення відступів */
@@ -132,10 +132,12 @@ img {
 .adress-nav .link:focus,
 .link.current {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .adress-nav {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
@@ -145,6 +147,7 @@ img {
 
 .adress-link {
   color: var(--title-text-color);
+  fill: var(--title-text-color);
 
   font-weight: 500;
   font-size: 14px;
@@ -154,6 +157,14 @@ img {
 
 .adress-nav li:first-child {
   margin-left: 0px;
+}
+
+.foter-contact {
+  display: flex;
+}
+
+.contact-icon {
+  margin-right: 10px;
 }
 
 /* --ТІЛО ОСНОВНОЇ СТОРІНКИ-- */
@@ -245,7 +256,7 @@ img {
 
 .feature-icon {
   display: flex;
-  background-color: #F5F4FA;
+  background-color: var(--portfolio-button);
   justify-content: center;
   border-radius: 4px;
   padding: 25px 0px;
@@ -301,14 +312,12 @@ img {
   padding-bottom: 30px;
 }
 
-.user-list li {
+.user-list > li {
   width: 270px;
   margin-right: 30px;
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-  0px 2px 1px rgba(0, 0, 0, 0.2);  
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
 
 .user-list li:last-child {
   margin-right: 0px;
@@ -316,6 +325,36 @@ img {
 
 .feature-section {
   padding-bottom: 94px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--social-icon);
+  width: 44px;
+  height: 44px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  border-radius: 50%;
+  background: var(--accent-color);
+  fill: var(-hero-color);
+}
+
+.social-list>li {
+  margin-right: 10px;
+}
+
+.social-list:last-child {
+  margin-right: 0px;
 }
 
 /* Постійні кліенти */
@@ -334,15 +373,15 @@ img {
   align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid #AFB1B8;
+  border: 1px solid var(--social-icon);
   border-radius: 4px;
-  fill: #AFB1B8;
+  fill: var(--social-icon);
 }
 
 .client-link:hover,
 .client-link:focus {
-  fill: #2196F3;
-  border: 1px solid #2196F3;
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* -- ТІЛО ПОРТФОЛіО-- */
@@ -469,10 +508,6 @@ img {
   margin-right: 0px;
 }
 
-
-
-
-
 .footer-container {
   display: flex;
 }
@@ -489,7 +524,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: #FFFFFF;
+  color: var(--hero-color);
 }
 
 .footer-social-list {
@@ -500,12 +535,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #FFFFFF;
+  fill: var(--hero-color);
   width: 44px;
   height: 44px;
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--footer-social-link);
 }
 
 .footer-social-list li {
@@ -519,5 +554,5 @@ img {
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background: #2196F3;
+  background: var(--accent-color);
 }
