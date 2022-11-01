@@ -346,7 +346,7 @@ img {
 .social-link:focus {
   border-radius: 50%;
   background: var(--accent-color);
-  fill: var(-hero-color);
+  fill: var(--hero-color);
 }
 
 .social-list>li {
